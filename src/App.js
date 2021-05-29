@@ -10,6 +10,12 @@ function App() {
         height: '100vh',
         backgroundColor: 'black'
       }}>
+        {new Array(1000).fill(0).map(index => {
+          return <mesh position={[(Math.random() - 0.5) * 100, (Math.random() - 0.5) * 100, (Math.random() - 0.5) * 100]}>
+            <sphereGeometry attach="geometry" args={[0.2, 0.2, 0.2]}/>
+            <meshPhongMaterial/>
+          </mesh>
+        })}
         <OrbitControls/>
         <pointLight/>
         <mesh position={[-25, -1, -20]}>
