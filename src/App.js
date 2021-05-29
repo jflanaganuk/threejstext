@@ -4,8 +4,12 @@ import fira from './Fira.json'
 
 function App() {
   return (
-      <Canvas>
-        <mesh>
+      <Canvas style={{
+        width: '100vw',
+        height: '100vh'
+      }}>
+        <pointLight/>
+        <mesh position={[-25, -1, -20]}>
           <textGeometry attach='geometry' args={[
             'hello world',
             {
